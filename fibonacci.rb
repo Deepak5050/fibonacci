@@ -2,10 +2,8 @@ def fib(n)
 	fib_array, curr_num, next_num, sum = [0, 1], 0, 1, 0
 	(n-1).times do
 		sum = curr_num + next_num
-		curr_num = next_num
-		next_num = sum
+		curr_num, next_num = next_num, sum
 		fib_array << sum
-		sum
 	end
 	"#{sum} => #{fib_array}"
 end
